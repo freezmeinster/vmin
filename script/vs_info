@@ -1,0 +1,4 @@
+#!/bin/bash
+
+VSHOME=$(vserver-info system SYSINFO | grep vserver-Rootdir | awk '{print $2}')
+
