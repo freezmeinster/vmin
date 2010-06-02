@@ -18,7 +18,7 @@ class Vmin extends Controller {
                 $this->load->view('footer');
 	}
         function about(){
-                $data['current']= "about";
+                $data['current']= "1";
 		$this->load->view('header', $data);                
                 $this->load->view('sidebar');
                 $this->load->view('home');

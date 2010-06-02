@@ -35,7 +35,7 @@
 			
 				<h3>Links</h3>
 				<ul class="sidemenu">
-					<li><a href="http://www.pdphoto.org/">PDPhoto.org</a></li>
+					<li><a href="http://www.bramandityo.com/">Developer</a></li>
 					<li><a href="http://www.squidfingers.com/patterns/">Squidfingers</a></li>
 					<li><a href="http://www.alistapart.com">Alistapart</a></li>					
 					<li><a href="http://www.cssremix.com">CSS Remix</a></li>
