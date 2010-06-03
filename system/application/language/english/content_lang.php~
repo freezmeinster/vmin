@@ -1,0 +1,3 @@
+<?php
+$lang['create_header'] = "Vserver Clone Creator";
+?>

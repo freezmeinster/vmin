@@ -7,6 +7,7 @@ class Vmin extends Controller {
 		parent::Controller();
 		$lang = get_cookie('lang');
 		$this->lang->load('link', $lang);
+		$this->lang->load('content', $lang);
 	}
 	
 	function index()
@@ -15,6 +16,14 @@ class Vmin extends Controller {
 		$this->load->view('header');                
                 $this->load->view('sidebar');
                 $this->load->view('home');
+                $this->load->view('footer');
+	}
+	function create()
+	{
+	        
+		$this->load->view('header');                
+                $this->load->view('sidebar');
+                $this->load->view('create');
                 $this->load->view('footer');
 	}
         function about(){

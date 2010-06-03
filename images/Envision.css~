@@ -147,7 +147,7 @@ label {
 }
 input {
 	padding:2px;
-	border:1px solid #2e6fac;
+	border:1px solid #000;
 	font: normal 1em Verdana, sans-serif;
 	color:#000000;
 }

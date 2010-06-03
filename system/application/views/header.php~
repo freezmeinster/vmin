@@ -12,7 +12,7 @@
 
 <link rel="stylesheet" href="<?php echo $this->config->item('vmin_url'); ?>images/Envision.css" type="text/css" />
 
-<title><?php echo $this->config->item('vmin_name'); ?></title>
+<title><?php echo $this->lang->line('site');?></title>
 	
 </head>
 
@@ -39,27 +39,11 @@
 			<ul>
 			       <?php
 			        $site = site_url();
-			        if ( $current="home" ){
-			           $now_home="current";
-			           }
-			        if ( $current="create"){
-			           $now_create="current";
-			        }
-			         if ( $current="reg"){
-			           $now_reg="current";
-			        }
-			         if ( $current="run"){
-			           $now_run="current";
-			        }
-			         if ( $current="about"){
-			           $now_about="current";
-			        }
-			        
-				echo "<li id=\"$now_home\"><a href=\"index.html\">".$this->lang->line('home')."</a></li>\n";
-				echo "<li id=\"$now_creat\"><a href=\"index.html\">".$this->lang->line('create')."S</a></li>\n";
-				echo "<li id=\"$now_reg\"><a href=\"index.html\">".$this->lang->line('reg')."</a></li>\n";
-				echo "<li id=\"$now_run\"><a href=\"$site/vmin/about\">".$this->lang->line('run')."</a></li>\n";
-				echo "<li id=\"$now_about\"><a href=\"$site/vmin/about\">".$this->lang->line('about')."</a></li>\n";
+				echo "<li id=\"\"><a href=\"$site/vmin\">".$this->lang->line('home')."</a></li>\n";
+				echo "<li id=\"\"><a href=\"$site/create\">".$this->lang->line('create')."</a></li>\n";
+				echo "<li id=\"\"><a href=\"index.html\">".$this->lang->line('reg')."</a></li>\n";
+				echo "<li id=\"\"><a href=\"\">".$this->lang->line('run')."</a></li>\n";
+				echo "<li id=\"\"><a href=\"\">".$this->lang->line('about')."</a></li>\n";
 				
 				?>
 			</ul>
