@@ -27,8 +27,8 @@
 			<p id="slogan"><?php echo $this->lang->line('slogan'); ?></p>	
 			<div id="header-links">
 			<p>
-				<a href="<?php echo site_url();?>/lib_vmin/set_lang/english">English</a> | 
-				<a href="<?php echo site_url();?>/lib_vmin/set_lang/indonesia">Endonesia</a> 			
+				<a href="<?php echo site_url();?>/lib_vmin/set_lang/english/<?php echo $pos; ?>">English</a> | 
+				<a href="<?php echo site_url();?>/lib_vmin/set_lang/indonesia/<?php echo $pos; ?>">Endonesia</a> 			
 			</p>		
 		</div>	
 			

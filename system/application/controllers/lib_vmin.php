@@ -8,6 +8,7 @@ class Lib_vmin extends Controller {
 	}
 	function set_lang(){
 	$lang = $this->uri->segment(3);
+	$before = $this->uri->segment(4);
                    $name = "lang";
                    $value = $lang;
                    $expire = "86500";
@@ -16,8 +17,8 @@ class Lib_vmin extends Controller {
                    $prefix = "";
 
          set_cookie($name, $value, $expire, $domain, $path, $prefix);
-	 redirect('vmin');
+	 redirect("vmin/$before");
 	}
-}
+	}
 ?>
 

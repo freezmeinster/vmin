@@ -107,7 +107,7 @@ $autoload['language'] = array();
 |
 */
 
-$autoload['model'] = array('sysinfo');
+$autoload['model'] = array('sysinfo','gui_vmin');
 
 
 
