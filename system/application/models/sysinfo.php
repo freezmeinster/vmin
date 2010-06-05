@@ -18,5 +18,11 @@ class Sysinfo extends Model {
              return $data;
         
     }
+    function reg_list(){
+    $conf_dir = $this->config->item('vmin_dir');
+    $clean = trim($conf_dir);
+    $ava = scandir($clean);
+    return $ava;
+    }
 }
 ?>
