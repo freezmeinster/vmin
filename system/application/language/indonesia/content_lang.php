@@ -7,7 +7,11 @@ $lang['about_content'] = "Vmin adalah sebuah aplikasi berbasis web yang berfungs
 $lang['create_header'] = "Pembuat Kontainer Vserver";
 $lang['create_name'] = "Nama";
 $lang['create_mem'] = "Memori";
+$lang['create_ip'] = "IP Untuk VPS";
+$lang['create_pass1'] = "Kata Sandi Untuk  ROOT";
+$lang['create_pass2'] = "Masukan kembali Kata Sandi";
 $lang['create_cont'] = "Contoh Kontainer";
 $lang['create_build'] = "Buat";
+$lang['create_reset'] = "Masukan ulang";
 
 ?>

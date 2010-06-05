@@ -9,8 +9,8 @@
 				<h2><a href="index.html"><?php echo $this->lang->line('create_header');?></a></h2>
 				<?php echo form_open('lib_vmin/create');?>
 				   <table>
-				   <tr><td><?php echo $this->lang->line('create_name');?></td><td>:</td><td><input type="text" name="name"/s></td></tr>
-				    <tr><td><?php echo $this->lang->line('create_mem');?></td><td>:</td><td><select>
+				   <tr><td><?php echo $this->lang->line('create_name');?></td><td>:</td><td><input type="text" name="name"/></td></tr>
+				    <tr><td><?php echo $this->lang->line('create_mem');?></td><td>:</td><td><select name="mem" >
 				                                      <option value="32">32 Mb</option>
 				                                      <option value="64">64 Mb</option>
 				                                      <option value="128">128 Mb</option>
@@ -19,11 +19,31 @@
 				    </td></tr>
 				     <tr><td><?php echo $this->lang->line('create_cont');?></td><td>:</td><td><input type="checkbox" name="template1" value="http"/> Http Server <br/>
 										  <input type="checkbox" name="template2" value="samba"/> Samba Server <br/>
-										  <input type="checkbox" name="template3" value="http"/> Http Server <br/>
-										  <input type="checkbox" name="template4" value="http"/> Http Server <br/>
-				                                                  <input type="checkbox" name="template5" value="chat"/> Chat Server
+										  <input type="checkbox" name="template2" value="ftp"/> FTP Server <br/>
+										  <input type="checkbox" name="template2" value="mysql"/> Mysql Server <br/>
+										  <input type="checkbox" name="template2" value="php"/> Php <br/>
+										  <input type="checkbox" name="template3" value="chat"/> Chat Server
 				                                         </td></tr>
-				      <tr><td colspan="2"><input type="reset" value="Reset"/></td><td><input type="submit" value="<?php echo $this->lang->line('create_build');?>"/></td></tr>
+				    <tr><td><?php echo $this->lang->line('create_ip');?></td><td>:</td><td><select name="ip" >
+				                                         <?php
+				                                          $ip = $this->config->item('vmin_ip');
+				                                          $nguk = $this->sysinfo->system();
+				                                            if ($nguk['vs_max'] > "254"){
+				                                                $nguk['vs_max'] = "254"; 
+				                                                				                                            }
+				                                            $i=2;
+									  while($i<=$nguk['vs_max'])
+									    {
+									      echo "<option>".$ip.".".$i."</option>\n";
+									      $i++;
+									    }
+				                                         
+                                                                         ?>
+				                                      </select>
+				    </td></tr>
+				     <tr><td><?php echo $this->lang->line('create_pass1');?></td><td>:</td><td><input type="password" name="pass1"/></td></tr>
+				     <tr><td><?php echo $this->lang->line('create_pass2');?></td><td>:</td><td><input type="password" name="pass2"/></td></tr>
+				      <tr><td colspan="2"><input type="reset" value="<?php echo $this->lang->line('create_reset');?>"/></td><td><input type="submit" value="<?php echo $this->lang->line('create_build');?>"/></td></tr>
 				   </table>
 				</form>
 

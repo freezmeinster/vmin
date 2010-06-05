@@ -13,7 +13,7 @@ class Sysinfo extends Model {
              $data['vs_free'] = shell_exec("df -h | grep $vs_dev | awk '{print $4}'");
              $data['vs_dir'] = shell_exec("vserver-info system SYSINFO | grep vserver-Rootdir | awk '{print $2}'");
              $data['vs_cap'] = shell_exec("df -h | grep $vs_dev | awk '{print $2}'");
-             $freedsk=shell_exec("df -m | grep /dev/root | awk '{print $4}'");
+             $freedsk=shell_exec("df -m | grep $vs_dev | awk '{print $4}'");
              $data['vs_max'] = floor($freedsk / 500);
              return $data;
         
