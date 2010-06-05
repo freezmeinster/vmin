@@ -19,6 +19,9 @@ class Lib_vmin extends Controller {
          set_cookie($name, $value, $expire, $domain, $path, $prefix);
 	 redirect("vmin/$before");
 	}
+	function create(){
+	
+	}
 	}
 ?>
 

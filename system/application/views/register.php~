@@ -6,7 +6,7 @@
 		
 				
 			<div id="main">
-				<h2><?php echo $this->lang->line('reg_header');?></h2>
+				<h2><a href="index.html">Vserver Health Status</a></h2>
 				
 				
 

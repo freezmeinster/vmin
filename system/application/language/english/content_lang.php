@@ -8,8 +8,9 @@ $lang['create_name'] = "Name";
 $lang['create_mem'] = "Memory";
 $lang['create_ip'] = "IP for VPS";
 $lang['create_pass1'] = "Password for ROOT";
-$lang['create_pass2'] = "Reinsert Password";
+$lang['create_pass2'] = "Enter Password Again";
 $lang['create_cont'] = "Container Template";
 $lang['create_build'] = "Create";
 $lang['create_reset'] = "Reset";
+$lang['reg_header'] = "Registered VPS";
 ?>
