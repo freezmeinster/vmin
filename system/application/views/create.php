@@ -30,11 +30,14 @@
 				                                          $nguk = $this->sysinfo->system();
 				                                            if ($nguk['vs_max'] > "254"){
 				                                                $nguk['vs_max'] = "254"; 
-				                                                				                                            }
-				                                            $i=2;
+				                                                }
+				                                           else if ($nguk['vs_max'] < "254"){
+				                                                $nguk['vs_max'] = $nguk['vs_max']+=4; 
+				                                                }
+				                                            $i=4;
 									  while($i<=$nguk['vs_max'])
 									    {
-									      echo "<option>".$ip.".".$i."</option>\n";
+									      echo "<option value=\"".$ip.".".$i."\">".$ip.".".$i."</option>\n";
 									      $i++;
 									    }
 				                                         

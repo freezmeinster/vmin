@@ -26,6 +26,22 @@ class Vmin extends Controller {
                 $this->load->view('create');
                 $this->load->view('footer');
 	}
+	function reg()
+	{
+	        
+		$this->load->view('header');                
+                $this->load->view('sidebar');
+                $this->load->view('register');
+                $this->load->view('footer');
+	}
+	function run()
+	{
+	        
+		$this->load->view('header');                
+                $this->load->view('sidebar');
+                $this->load->view('running');
+                $this->load->view('footer');
+	}
         function about(){
                 $data['current']= "about";
 		$this->load->view('header', $data);                
