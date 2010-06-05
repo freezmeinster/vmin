@@ -41,9 +41,9 @@
 			        $site = site_url();
 				echo "<li id=\"\"><a href=\"$site/vmin\">".$this->lang->line('home')."</a></li>\n";
 				echo "<li id=\"\"><a href=\"$site/vmin/create\">".$this->lang->line('create')."</a></li>\n";
-				echo "<li id=\"\"><a href=\"index.html\">".$this->lang->line('reg')."</a></li>\n";
-				echo "<li id=\"\"><a href=\"\">".$this->lang->line('run')."</a></li>\n";
-				echo "<li id=\"\"><a href=\"\">".$this->lang->line('about')."</a></li>\n";
+				echo "<li id=\"\"><a href=\"$site/vmin/reg\">".$this->lang->line('reg')."</a></li>\n";
+				echo "<li id=\"\"><a href=\"$site/vmin/run\">".$this->lang->line('run')."</a></li>\n";
+				echo "<li id=\"\"><a href=\"$site/vmin/about\">".$this->lang->line('about')."</a></li>\n";
 				
 				?>
 			</ul>

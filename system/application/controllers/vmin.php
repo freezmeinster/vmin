@@ -30,7 +30,7 @@ class Vmin extends Controller {
                 $data['current']= "about";
 		$this->load->view('header', $data);                
                 $this->load->view('sidebar');
-                $this->load->view('home');
+                $this->load->view('about');
                 $this->load->view('footer');
         }
 }
