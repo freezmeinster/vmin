@@ -13,4 +13,5 @@ $lang['create_cont'] = "Container Template";
 $lang['create_build'] = "Create";
 $lang['create_reset'] = "Reset";
 $lang['reg_header'] = "Registered VPS";
+$lang['reg_option'] = "Option";
 ?>

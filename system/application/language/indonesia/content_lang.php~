@@ -13,5 +13,6 @@ $lang['create_pass2'] = "Masukan kembali Kata Sandi";
 $lang['create_cont'] = "Contoh Kontainer";
 $lang['create_build'] = "Buat";
 $lang['create_reset'] = "Masukan ulang";
+$lang['reg_header'] = "VPS yang terdaftar";
 
 ?>

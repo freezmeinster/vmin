@@ -18,11 +18,32 @@ class Sysinfo extends Model {
              return $data;
         
     }
+    
     function reg_list(){
     $conf_dir = $this->config->item('vmin_dir');
     $clean = trim($conf_dir);
-    $ava = scandir("'$clean'");
-    return $ava;
+    $dir = "$clean/etc/vservers";
+    $ava = scandir($dir);
+    foreach ($ava as $wew) {
+         if ($wew != "." && $wew != ".." && $wew != ".defaults" && $wew != ".distributions"){ 
+              $context = shell_exec("cat $dir/$wew/context");
+              $ip = shell_exec("cat $dir/$wew/interfaces/0/ip");
+              $mem_pure = shell_exec("cat $dir/$wew/rlimits/rss.hard");
+              $mem = floor($mem_pure/250);
+              $site = site_url();
+	      echo "<tr><td>";
+	      echo "$wew\n" ;
+	      echo "</td><td>";
+	      echo "$context\n" ;
+	      echo "</td><td>";
+	      echo "$ip\n" ;
+	      echo "</td><td>";
+	      echo "$mem Mb\n";
+	      echo "</td><td>";
+	      echo "<a href>Edit</a>  <a href=\"$site/lib_vmin/delete/$name\">Delete</a>" ;
+	      echo "</td><td></tr>";
+	   }
+      }
     }
 }
 ?>

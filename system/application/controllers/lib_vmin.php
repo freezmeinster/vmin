@@ -20,7 +20,17 @@ class Lib_vmin extends Controller {
 	 redirect("vmin/$before");
 	}
 	function create(){
+	$name
+	$context
+	$mem
+	$ip
+	$pass
 	
+	}
+	function delete(){
+	$name = $this->uri->segment(3);
+	$this->mod_vmin->destroy_vmin($name);
+	redirect("vmin/reg");
 	}
 	}
 ?>

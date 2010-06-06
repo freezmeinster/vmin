@@ -14,5 +14,6 @@ $lang['create_cont'] = "Contoh Kontainer";
 $lang['create_build'] = "Buat";
 $lang['create_reset'] = "Masukan ulang";
 $lang['reg_header'] = "VPS yang terdaftar";
+$lang['reg_option'] = "Opsi";
 
 ?>

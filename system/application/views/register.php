@@ -15,17 +15,14 @@
 				echo "</th><th>";
 				echo $this->lang->line('create_ip');
 				echo "</th><th>";
-				echo $this->lang->line('create_name');
+				echo $this->lang->line('create_mem');
+				echo "</th><th>";
+				echo $this->lang->line('reg_option');
 				echo "</th></tr>";
 				;?>
 				
 				<?php
-				$nguk = $this->sysinfo->reg_list();
-				foreach ($nguk as $wew) {
-				    if ($wew != "." && $wew != ".."){ 
-				      echo "$wew\n" ;
-				     }
-		                  }
+				$this->sysinfo->reg_list();
 				?>
                                </table> 
 			</div>

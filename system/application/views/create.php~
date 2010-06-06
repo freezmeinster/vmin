@@ -22,7 +22,6 @@
 										  <input type="checkbox" name="template2" value="ftp"/> FTP Server <br/>
 										  <input type="checkbox" name="template2" value="mysql"/> Mysql Server <br/>
 										  <input type="checkbox" name="template2" value="php"/> Php <br/>
-										  <input type="checkbox" name="template3" value="chat"/> Chat Server
 				                                         </td></tr>
 				    <tr><td><?php echo $this->lang->line('create_ip');?></td><td>:</td><td><select name="ip" >
 				                                         <?php

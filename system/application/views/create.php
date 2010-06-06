@@ -10,6 +10,7 @@
 				<?php echo form_open('lib_vmin/create');?>
 				   <table>
 				   <tr><td><?php echo $this->lang->line('create_name');?></td><td>:</td><td><input type="text" name="name"/></td></tr>
+				   <tr><td>Context</td><td>:</td><td><input type="text" name="context"/></td></tr>
 				    <tr><td><?php echo $this->lang->line('create_mem');?></td><td>:</td><td><select name="mem" >
 				                                      <option value="32">32 Mb</option>
 				                                      <option value="64">64 Mb</option>
