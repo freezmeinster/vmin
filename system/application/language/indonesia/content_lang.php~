@@ -13,6 +13,10 @@ $lang['create_pass2'] = "Masukan kembali Kata Sandi";
 $lang['create_cont'] = "Contoh Kontainer";
 $lang['create_build'] = "Buat";
 $lang['create_reset'] = "Masukan ulang";
+$lang['create_loading'] = "Membuat VPS. silahkan tunggu . . . ";
 $lang['reg_header'] = "VPS yang terdaftar";
-
+$lang['reg_option'] = "Opsi";
+$lang['run_header'] = "VPS yang sedang berjalan";
+$lang['run_run'] = "VPS yang sedang berjalan";
+$lang['run_ava'] = "VPS yang terdaftar";
 ?>

@@ -64,6 +64,10 @@ img.float-right {
 img.float-left {
   margin: 5px 10px 10px 0px;
 }
+img.system{
+background: #FAFAFA;
+	padding: 5px;
+}
 
 h1, h2, h3, p {
 	padding: 10px;		

@@ -12,5 +12,11 @@ class Mod_vmin extends Model {
     $vdir = trim($hah);
     shell_exec ("sudo /usr/local/sbin/vserver --silent $name delete ");
     }
+    function start_vmin($name){
+    shell_exec("sudo /usr/local/sbin/vserver $name start");
+    }
+    function stop_vmin($name){
+    shell_exec("sudo /usr/local/sbin/vserver $name stop");
+    }
 }
 ?>

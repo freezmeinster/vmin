@@ -12,5 +12,11 @@ $lang['create_pass2'] = "Enter Password Again";
 $lang['create_cont'] = "Container Template";
 $lang['create_build'] = "Create";
 $lang['create_reset'] = "Reset";
+$lang['create_loading'] = "Creating VPS, please wait . . . ";
 $lang['reg_header'] = "Registered VPS";
+$lang['reg_option'] = "Option";
+$lang['run_header'] = "Running VPS";
+$lang['run_run'] = "Running VPS";
+$lang['run_ava'] = "Registerd VPS";
+$lang['run_up'] = "VPS's Uptine";
 ?>

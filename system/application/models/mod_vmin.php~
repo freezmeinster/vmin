@@ -10,8 +10,13 @@ class Mod_vmin extends Model {
     $hih = $this->config->item('vmin_home');
     $vhome = trim($hih);
     $vdir = trim($hah);
-    shell_exec ("sudo rm -rf  $vdir/etc/vserver/$name ");
-    shell_exec ("sudo rm -rf $vhome/$name");
+    shell_exec ("sudo /usr/local/sbin/vserver --silent $name delete ");
+    }
+    function start_vmin($name){
+    
+    }
+    function stop_vmin($name){
+    
     }
 }
 ?>
