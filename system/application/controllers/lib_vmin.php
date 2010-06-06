@@ -20,13 +20,17 @@ class Lib_vmin extends Controller {
 	 redirect("vmin/$before");
 	}
 	function create(){
-	$name
-	$context
-	$mem
-	$ip
-	$pass
-	
+	$name = $this->input->post('name');
+	$context = $this->input->post('context');
+	$mem = $this->input->post('mem');
+	$ip = $this->input->post('ip');
+	$pass1 = $this->input->post('password1');
+	$pass2 = $this->input->post('password2');
+	 if ($pass1 == $pass2){
+            $this->build_vmin->create($name,$context,$mem,$ip,$pass1);
+	 } else redirect('vmin/create');
 	}
+	
 	function delete(){
 	$name = $this->uri->segment(3);
 	$this->mod_vmin->destroy_vmin($name);

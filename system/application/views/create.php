@@ -44,8 +44,8 @@
                                                                          ?>
 				                                      </select>
 				    </td></tr>
-				     <tr><td><?php echo $this->lang->line('create_pass1');?></td><td>:</td><td><input type="password" name="pass1"/></td></tr>
-				     <tr><td><?php echo $this->lang->line('create_pass2');?></td><td>:</td><td><input type="password" name="pass2"/></td></tr>
+				     <tr><td><?php echo $this->lang->line('create_pass1');?></td><td>:</td><td><input type="password1" name="pass1"/></td></tr>
+				     <tr><td><?php echo $this->lang->line('create_pass2');?></td><td>:</td><td><input type="password22222" name="pass2"/></td></tr>
 				      <tr><td colspan="2"><input type="reset" value="<?php echo $this->lang->line('create_reset');?>"/></td><td><input type="submit" value="<?php echo $this->lang->line('create_build');?>"/></td></tr>
 				   </table>
 				</form>
