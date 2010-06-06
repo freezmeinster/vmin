@@ -29,6 +29,7 @@ class Lib_vmin extends Controller {
 	 if ($pass1 == $pass2){
             $this->build_vmin->create($name,$context,$mem,$ip,$pass1);
 	 } else redirect('vmin/create');
+	 //redirect('vmin/reg');
 	}
 	
 	function delete(){
