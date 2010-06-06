@@ -6,7 +6,11 @@ class Mod_vmin extends Model {
         parent::Model();
     }
     function destroy_vmin($name){
-    shell_exec ("/usr/local/sbin/vserver $name delete");
+    $hah = $this->config->item('vmin_dir');
+    $hih = $this->config->item('vmin_home');
+    $vhome = trim($hih);
+    $vdir = trim($hah);
+    shell_exec ("sudo /usr/local/sbin/vserver --silent $name delete ");
     }
 }
 ?>

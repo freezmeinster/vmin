@@ -27,8 +27,7 @@ class Lib_vmin extends Controller {
 	$pass1 = $this->input->post('password1');
 	$pass2 = $this->input->post('password2');
 	 if ($pass1 == $pass2){
-	    $lah = $this->build_vmin->create($name,$context,$mem,$ip,$pass1);
-	    echo $lah['error'];
+            $this->build_vmin->create($name,$context,$mem,$ip,$pass1);
 	 } else redirect('vmin/create');
 	}
 	
