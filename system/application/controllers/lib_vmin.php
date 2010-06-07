@@ -15,7 +15,7 @@ class Lib_vmin extends Controller {
                    $name = "lang";
                    $value = $lang;
                    $expire = "86500";
-                   $domain = "oss.cs.int-upi.edu";
+                   $domain = "192.168.70.248";
                    $path = "/";
                    $prefix = "";
 
@@ -33,7 +33,7 @@ class Lib_vmin extends Controller {
 	    $pass = $pass1;
 	 } else redirect('vmin/create');
             $this->build_vmin->create($name,$mem,$ip,$pass1);
-            redirect('vmin/reg');
+           redirect('vmin/reg');
 	 }
 	 
 	function delete(){

@@ -11,7 +11,7 @@ class Gui_vmin extends Model {
                    $name = $name;
                    $value = $value;
                    $expire = "86500";
-                   $domain = "oss.cs.int-upi.edu";
+                   $domain = "192.168.70.248";
                    $path = "/";
                    $prefix = "";
 

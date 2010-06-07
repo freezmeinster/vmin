@@ -17,9 +17,6 @@ class Gui_vmin extends Model {
 
          set_cookie($name, $value, $expire, $domain, $path, $prefix);
 	}
-	function get_cookie(){
-	
-	}
 	
 }
 ?>

@@ -11,7 +11,7 @@
 |	http://example.com/
 |
 */
-$config['base_url']	= "http://oss.cs.int-upi.edu/vmin/";
+$config['base_url']	= "http://192.168.70.248/vmin/";
 
 /*
 |--------------------------------------------------------------------------
