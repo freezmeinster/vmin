@@ -19,4 +19,7 @@ $lang['run_header'] = "Running VPS";
 $lang['run_run'] = "Running VPS";
 $lang['run_ava'] = "Registerd VPS";
 $lang['run_up'] = "VPS's Uptime";
+$lang['login'] = "Authenticate Your self";
+$lang['login_user'] = "Username";
+$lang['login_pass'] = "Password";
 ?>

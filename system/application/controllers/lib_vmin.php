@@ -72,6 +72,15 @@ class Lib_vmin extends Controller {
 	redirect("vmin/run");
 	}
 	
+	function login(){
+		$data['pos'] = "login";
+		$data['action'] = "login";
+		$this->load->view('lib/header',$data);                
+        $this->load->view('lib/sidebar');
+        $this->load->view('lib/login',$data);
+        $this->load->view('lib/footer');      
+    }
+	
 	}
 ?>
 
