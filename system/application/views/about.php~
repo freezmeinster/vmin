@@ -10,8 +10,7 @@
 				<p>
                                    <?php echo $this->lang->line('about_content');?> 
                                    </p>
-                                  
-                                  <p>
+                                   <p>
                                    <img src="<?php echo $this->config->item('vmin_url'); ?>/images/ci_logo.jpg"/>
                                 </p>
 			</div>

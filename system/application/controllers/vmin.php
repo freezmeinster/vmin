@@ -58,6 +58,16 @@ class Vmin extends Controller {
                 $this->load->view('footer');
                 
 	}
+	function login()
+	{
+	        $data['pos'] = "run";
+	        $data['before'] = $this->uri->segment(3);
+		$this->load->view('lib/header',$data);                
+                $this->load->view('lib/sidebar');
+                $this->load->view('lib/login',$data);
+                $this->load->view('lib/footer');
+                
+	}
         function about(){
                 $data['pos'] = "about";
                 $this->load->view('header', $data);                

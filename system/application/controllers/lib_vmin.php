@@ -60,6 +60,17 @@ class Lib_vmin extends Controller {
 	redirect("vmin/reg");
 	}
 	
+	function login(){
+	$pass= $this->input->post('pass');
+	$user= $this->input->post('user');
+	
+	$newdata = array(
+                   'username'  => 'johndoe',
+                   'email'     => 'johndoe@some-site.com',
+               );
+        $this->session->set_userdata($newdata);
+	}
+	
 	function start(){
 	$name = $this->uri->segment(3);
 	$this->mod_vmin->start_vmin($name);
@@ -71,15 +82,6 @@ class Lib_vmin extends Controller {
 	$this->mod_vmin->stop_vmin($name);
 	redirect("vmin/run");
 	}
-	
-	function login(){
-		$data['pos'] = "login";
-		$data['action'] = "login";
-		$this->load->view('lib/header',$data);                
-        $this->load->view('lib/sidebar');
-        $this->load->view('lib/login',$data);
-        $this->load->view('lib/footer');      
-    }
 	
 	}
 ?>
