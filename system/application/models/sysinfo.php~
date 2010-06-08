@@ -40,7 +40,7 @@ class Sysinfo extends Model {
 	      echo "</td><td>";
 	      echo "$mem Mb\n";
 	      echo "</td><td>";
-	      echo "<a href>Edit</a>  <a href=\"$site/lib_vmin/delete/$wew\">Delete</a>" ;
+	      echo "<a href=\"$site/vmin/edit/$wew\">Edit</a>  <a href=\"$site/lib_vmin/delete/$wew\">Delete</a>" ;
 	      echo "</td><td></tr>";
 	   }
       }
@@ -85,8 +85,8 @@ class Sysinfo extends Model {
               $mem_pure = shell_exec("cat $dir/../../../etc/vservers/$wew/rlimits/rss.hard");
               $total_mem = floor($mem_pure/250);
               $site = site_url();
-              $vps_mem = shell_exec("/usr/local/sbin/vserver-stat | grep $wew | awk '{ print $4}' | cut -dM -f 1 | cut -d. -f 1");
-              $up = shell_exec("/usr/local/sbin/vserver-stat | grep $wew | awk '{ print $7}'");
+              $vps_mem = shell_exec("sudo /usr/local/sbin/vserver-stat | grep $wew | awk '{ print $4}' | cut -dM -f 1 | cut -d. -f 1");
+              $up = shell_exec("sudo /usr/local/sbin/vserver-stat | grep $wew | awk '{ print $7}'");
               $mem = $total_mem-$vps_mem;
 	      echo "<tr><td>";
 	      echo "$wew\n" ;
@@ -104,7 +104,13 @@ class Sysinfo extends Model {
 	   }
       }
     }
-    function check_ip(){
+    function det_vps($name){
+    $conf_dir = $this->config->item('vmin_dir');
+    $clean = trim($conf_dir);
+    $pure_mem = shell_exec("cat $clean/etc/vservers/$name/rlimits/rss.hard");
+    $data['mem'] = floor($pure_mem);
+    $data['ip'] = shell_exec("cat $clean/etc/vservers/$name/interfaces/0/ip");
+    return $data;
     }
     }
 ?>

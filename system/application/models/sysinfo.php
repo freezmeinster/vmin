@@ -40,7 +40,7 @@ class Sysinfo extends Model {
 	      echo "</td><td>";
 	      echo "$mem Mb\n";
 	      echo "</td><td>";
-	      echo "<a href>Edit</a>  <a href=\"$site/lib_vmin/delete/$wew\">Delete</a>" ;
+	      echo "<a href=\"$site/vmin/edit/$wew\">Edit</a>  <a href=\"$site/lib_vmin/delete/$wew\">Delete</a>" ;
 	      echo "</td><td></tr>";
 	   }
       }
@@ -104,7 +104,13 @@ class Sysinfo extends Model {
 	   }
       }
     }
-    function check_ip(){
+    function det_vps($name){
+    $conf_dir = $this->config->item('vmin_dir');
+    $clean = trim($conf_dir);
+    $pure_mem = shell_exec("cat $clean/etc/vservers/$name/rlimits/rss.hard");
+    $data['mem'] = floor($pure_mem/250);
+    $data['ip'] = shell_exec("cat $clean/etc/vservers/$name/interfaces/0/ip");
+    return $data;
     }
     }
 ?>

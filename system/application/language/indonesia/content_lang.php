@@ -16,6 +16,7 @@ $lang['create_reset'] = "Masukan ulang";
 $lang['create_loading'] = "Membuat VPS. silahkan tunggu . . . ";
 $lang['reg_header'] = "VPS yang terdaftar";
 $lang['reg_option'] = "Opsi";
+$lang['reg_edit'] = "Mengedit VPS";
 $lang['run_header'] = "VPS yang sedang berjalan";
 $lang['run_run'] = "VPS yang sedang berjalan";
 $lang['run_ava'] = "VPS yang terdaftar";

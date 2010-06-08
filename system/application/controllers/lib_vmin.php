@@ -36,11 +36,30 @@ class Lib_vmin extends Controller {
            redirect('vmin/reg');
 	 }
 	 
+	function change(){
+	$name = $this->input->post('name');
+	$mem = $this->input->post('mem');
+	$ip = $this->input->post('ip');
+	$pass1 = $this->input->post('pass1');
+	$pass2 = $this->input->post('pass2');
+	
+	if ($pass1 == $pass2 && $pass1 != "default" && $pass2 != "default"){
+            $pass = $pass1;	
+	   }
+	else if ($pass1 == "default" && $pass2 == "default"){
+	     $pass = "0";
+	   }
+	
+	$this->mod_vmin->edit_vmin($name,$mem,$ip,$pass);
+	redirect("vmin/reg");
+	}
+	
 	function delete(){
 	$name = $this->uri->segment(3);
 	$this->mod_vmin->destroy_vmin($name);
 	redirect("vmin/reg");
 	}
+	
 	function start(){
 	$name = $this->uri->segment(3);
 	$this->mod_vmin->start_vmin($name);

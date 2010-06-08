@@ -40,8 +40,6 @@
 				echo "</th><th>";
 				echo $this->lang->line('run_up');
 				echo "</th><th>";
-				echo $this->lang->line('create_mem');
-				echo "</th><th>";
 				echo $this->lang->line('reg_option');
 				echo "</th></tr>";
 				;?>
