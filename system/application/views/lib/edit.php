@@ -15,6 +15,8 @@
 				<?php echo form_open('lib_vmin/change');?>
 				   <table>
 				   <input type="hidden" name="name" value="<?php echo $name;?>"/>
+				   <input type="hidden" name="old_ip" value="<?php echo $info['ip'];?>"/>
+				   <input type="hidden" name="old_mem" value="<?php echo $info['mem'];?>"/>
 				    <tr><td><?php echo $this->lang->line('create_mem');?></td><td>:</td><td><select name="mem" >
 				                                      <option value="<?php echo $info['mem'];?>">Default</option>
 				                                      <option value="16">16 Mb</option>

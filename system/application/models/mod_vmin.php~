@@ -15,7 +15,7 @@ class Mod_vmin extends Model {
     function start_vmin($name){
     shell_exec("sudo /usr/local/sbin/vserver $name start");
     }
-    function edit_vmin($name,$mem,$ip,$pass){
+    function edit_vmin($name,$mem,$old_mem,$ip,$old_ip,$pass){
     $vdir = $this->config->item('vmin_dir');
     $vhome = $this->config->item('vmin_home');
     $home = trim($vhome);
@@ -24,13 +24,18 @@ class Mod_vmin extends Model {
     if ($pass != "0"){
          $en_pass = shell_exec("/usr/bin/openssl passwd $pass");
          $lah = trim($en_pass);
-         shell_exec("sudo /bin/chroot $home$name/ /usr/sbin/usermod -p \"$lah\" root");     
+         shell_exec("sudo /bin/chroot $home/$name/ /usr/sbin/usermod -p \"$lah\" root");     
     } 
-    //echo "sudo /usr/local/etc/script/edit_vps mem $memory $name";
-    //echo "sudo /usr/local/etc/script/edit_vps ip $ip $name";
-   shell_exec("sudo /usr/local/etc/script/edit_vps mem $memory $name");
-   shell_exec("sudo /usr/local/etc/script/edit_vps ip $ip $name");
+    
+    if ($old_mem != $mem){
+    shell_exec("sudo /usr/local/etc/script/edit_vps 1 $memory $name");
     }
+    
+    if ($old_ip != $ip) {
+    shell_exec("sudo /usr/local/etc/script/edit_vps 2 $ip $old_ip $name");
+    }
+    }
+    
     function stop_vmin($name){
     shell_exec("sudo /usr/local/sbin/vserver $name stop");
     }

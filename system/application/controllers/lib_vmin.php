@@ -33,13 +33,15 @@ class Lib_vmin extends Controller {
 	    $pass = $pass1;
 	 } else redirect('vmin/create');
             $this->build_vmin->create($name,$mem,$ip,$pass1);
-           redirect('vmin/reg');
+         redirect('vmin/reg');
 	 }
 	 
 	function change(){
 	$name = $this->input->post('name');
 	$mem = $this->input->post('mem');
 	$ip = $this->input->post('ip');
+	$old_ip = $this->input->post('old_ip');
+	$old_mem = $this->input->post('old_mem');
 	$pass1 = $this->input->post('pass1');
 	$pass2 = $this->input->post('pass2');
 	
@@ -50,7 +52,7 @@ class Lib_vmin extends Controller {
 	     $pass = "0";
 	   }
 	
-	$this->mod_vmin->edit_vmin($name,$mem,$ip,$pass);
+	$this->mod_vmin->edit_vmin($name,$mem,$old_mem,$ip,$old_ip,$pass);
 	redirect("vmin/reg");
 	}
 	
