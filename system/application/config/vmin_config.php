@@ -5,4 +5,6 @@
     $config['vmin_pkg']= "/home/bahan";
     $config['vmin_home']= shell_exec("/usr/local/sbin/vserver-info system SYSINFO | grep vserver-Rootdir: | awk '{print $2}'");
     $config['vmin_dir']= shell_exec("/usr/local/sbin/vserver-info system SYSINFO | grep prefix: | awk '{print $2}'");    
+    $config['user_vmin']="admin";
+    $config['pass_vmin']="210789";  
 ?>

@@ -22,4 +22,5 @@ $lang['run_up'] = "VPS's Uptime";
 $lang['login'] = "Authenticate Your self";
 $lang['login_user'] = "Username";
 $lang['login_pass'] = "Password";
+$lang['login_back'] = "Back";
 ?>

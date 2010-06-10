@@ -62,16 +62,21 @@ class Lib_vmin extends Controller {
 	redirect("vmin/reg");
 	}
 	
-	function login(){
+	function check(){
 	$pass= $this->input->post('pass');
 	$user= $this->input->post('user');
-	
-	$newdata = array(
-                   'username'  => 'johndoe',
-                   'email'     => 'johndoe@some-site.com',
-               );
-        $this->session->set_userdata($newdata);
+	$before = $this->input->post('asal');
+        $valid = $this->gui_vmin->cek_login($user,$pass);
+             if ($valid == "1"){
+             redirect("vmin/$before");
+               }else if ($valid == "0"){
+                redirect("vmin/login/$before");
+             }
 	}
+        function logout(){
+         $this->session->sess_destroy();
+         redirect('vmin');
+         }
 	
 	function start(){
 	$name = $this->uri->segment(3);

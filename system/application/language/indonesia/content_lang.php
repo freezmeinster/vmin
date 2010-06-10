@@ -21,4 +21,8 @@ $lang['run_header'] = "VPS yang sedang berjalan";
 $lang['run_run'] = "VPS yang sedang berjalan";
 $lang['run_ava'] = "VPS yang terdaftar";
 $lang['run_up'] = "Waktu Hidup VPS";
+$lang['login'] = "Mengotentikasi Diri";
+$lang['login_user'] = "Nama User";
+$lang['login_pass'] = "Kata Sandi";
+$lang['login_back'] = "Kembali";
 ?>

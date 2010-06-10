@@ -11,8 +11,8 @@
 				<table>
 				<input type="hidden" name="asal" value="<?php echo $before;?>"/>
 				<tr><td><?php echo $this->lang->line('login_user'); ?></td><td><input type="text" name="user" /></td></tr>
-				<tr><td><?php echo $this->lang->line('login_pass'); ?></td><td><input type="text" name="pass" /></td></tr>
-				<tr><td colspan="3"><input type="button" value="Back" onClick="history.go(-1)"/>   <input type="submit" value="Login"></td></tr>
+				<tr><td><?php echo $this->lang->line('login_pass'); ?></td><td><input type="password" name="pass" /></td></tr>
+				<tr><td colspan="3"><input type="button" value="<?php echo $this->lang->line('login_back'); ?>" onClick="history.go(-1)"/>   <input type="submit" value="Login"></td></tr>
 				</table>
 			    </form>
 			</div>

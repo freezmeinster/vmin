@@ -39,12 +39,16 @@
 			<ul>
 			       <?php
 			        $site = site_url();
+                                $user = $this->session->userdata('user');
+                                $user_vmin = $this->config->item('user_vmin'); 
 				echo "<li id=\"\"><a href=\"$site/vmin\">".$this->lang->line('home')."</a></li>\n";
 				echo "<li id=\"\"><a href=\"$site/vmin/create\">".$this->lang->line('create')."</a></li>\n";
 				echo "<li id=\"\"><a href=\"$site/vmin/reg\">".$this->lang->line('reg')."</a></li>\n";
 				echo "<li id=\"\"><a href=\"$site/vmin/run\">".$this->lang->line('run')."</a></li>\n";
 				echo "<li id=\"\"><a href=\"$site/vmin/about\">".$this->lang->line('about')."</a></li>\n";
-				
-				?>
+                                if ($user == $user_vmin){
+                                  echo "<li id=\"\"><a href=\"$site/lib_vmin/logout\">Logout</a></li>\n";
+                                 }
+                                  ?>
 			</ul>
 		</div>	
