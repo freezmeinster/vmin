@@ -24,7 +24,7 @@ class Mod_vmin extends Model {
     if ($pass != "0"){
          $en_pass = shell_exec("/usr/bin/openssl passwd $pass");
          $lah = trim($en_pass);
-         shell_exec("sudo /bin/chroot $home/$name/ /usr/sbin/usermod -p \"$lah\" root");     
+         shell_exec ("sudo /bin/chroot $home/$name/ /usr/sbin/usermod -p \"$lah\" root");     
     } 
     
     if ($old_mem != $mem){

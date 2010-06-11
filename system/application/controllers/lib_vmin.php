@@ -32,7 +32,7 @@ class Lib_vmin extends Controller {
 	 if ($pass1 == $pass2){
 	    $pass = $pass1;
 	 } else redirect('vmin/create');
-            $this->build_vmin->create($name,$mem,$ip,$pass1);
+            $this->build_vmin->create($name,$mem,$ip,$pass);
          redirect('vmin/reg');
 	 }
 	 
