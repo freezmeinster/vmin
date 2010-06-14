@@ -78,13 +78,13 @@ class Vmin extends Controller {
                 $this->load->view('lib/footer');
                 
 	}
-        function about(){
+        /*function about(){
                 $data['pos'] = "about";
                 $this->load->view('header', $data);                
                 $this->load->view('sidebar');
                 $this->load->view('about');
                 $this->load->view('footer');
                 
-        }
+        }*/
 }
 ?>

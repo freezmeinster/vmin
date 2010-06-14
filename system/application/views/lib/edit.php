@@ -8,7 +8,6 @@
 			<div id="main">
 			    <?php
 			       $info = $this->sysinfo->det_vps($name);
-			       print_r($info);
 			   ?>
 			  
 				<h2><a href="index.html"><?php echo $this->lang->line('reg_edit');?>  <?php echo $name;?></a></h2>
@@ -50,7 +49,7 @@
 				    </td></tr>
 				     <tr><td><?php echo $this->lang->line('create_pass1');?></td><td>:</td><td><input type="password" name="pass1" value="default"/></td></tr>
 				     <tr><td><?php echo $this->lang->line('create_pass2');?></td><td>:</td><td><input type="password" name="pass2" value="default"/></td></tr>
-				      <tr><td colspan="2"><input type="reset" value="<?php echo $this->lang->line('create_reset');?>"/></td><td><input type="submit" value="<?php echo $this->lang->line('create_build');?>"/></td></tr>
+				      <tr><td colspan="2"><input type="reset" value="<?php echo $this->lang->line('create_reset');?>"/></td><td><input type="submit" value="<?php echo $this->lang->line('create_edit');?>"/></td></tr>
 				   </table>
 				</form>
 
