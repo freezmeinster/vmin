@@ -40,7 +40,7 @@ class Sysinfo extends Model {
 	      echo "</td><td>";
 	      echo "$mem Mb\n";
 	      echo "</td><td>";
-	      echo "<a href=\"$site/vmin/edit/$wew\">Edit</a> <a href=\"$site/vmin/edit/$wew\">Template</a> <a href=\"$site/lib_vmin/delete/$wew\">Delete</a>" ;
+	      echo "<a href=\"$site/vmin/edit/$wew\">Edit</a> <a href=\"$site/lib_vmin/delete/$wew\">Delete</a>" ;
 	      echo "</td><td></tr>";
 	   }
       }

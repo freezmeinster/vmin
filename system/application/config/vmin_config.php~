@@ -1,5 +1,5 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
-    $config['vmin_url']	= "http://192.168.70.248/vmin/";
+    $config['vmin_url']	= "http://192.168.70.248/vmin-full/";
     $config['vmin_dev']= "/dev/root";
     $config['vmin_ip']= "192.168.70";
     $config['vmin_pkg']= "/home/bahan";

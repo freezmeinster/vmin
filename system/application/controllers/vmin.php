@@ -34,7 +34,7 @@ class Vmin extends Controller {
 	}
 	function reg()
 	{     
-	        $log = $this->gui_vmin->cek_session('create');
+	        $log = $this->gui_vmin->cek_session('reg');
                 if ($log=="1"){
                 $data['pos'] = "reg";
 		$this->load->view('header',$data);                
@@ -58,7 +58,7 @@ class Vmin extends Controller {
 	}
 	function template()
 	{     
-                $log = $this->gui_vmin->cek_session('edit');
+                $log = $this->gui_vmin->cek_session('template');
                 if ($log=="1"){
 	        $data['pos'] = "edit";
 	        $data['name'] = $this->uri->segment(3);

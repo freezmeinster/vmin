@@ -23,7 +23,7 @@
 		<!--header -->
 		<div id="header">			
 				
-			<h1 id="logo-text"><a href="index.html"><?php echo $this->lang->line('site'); ?></a></h1>		
+			<h1 id="logo-text"><a href="vmin"><?php echo $this->lang->line('site'); ?></a></h1>		
 			<p id="slogan"><?php echo $this->lang->line('slogan'); ?></p>	
 			<div id="header-links">
 			<p>

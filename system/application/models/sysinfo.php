@@ -40,7 +40,7 @@ class Sysinfo extends Model {
 	      echo "</td><td>";
 	      echo "$mem Mb\n";
 	      echo "</td><td>";
-	      echo "<a href=\"$site/vmin/edit/$wew\">Edit</a> <a href=\"$site/vmin/template/$wew\">Template</a> <a href=\"$site/lib_vmin/delete/$wew\">Delete</a>" ;
+	      echo "<a href=\"$site/vmin/edit/$wew\">Edit</a> <a href=\"$site/lib_vmin/delete/$wew\">Delete</a>" ;
 	      echo "</td><td></tr>";
 	   }
       }
@@ -57,7 +57,15 @@ class Sysinfo extends Model {
               $ip = shell_exec("cat $dir/$wew/interfaces/0/ip");
               $mem_pure = shell_exec("cat $dir/$wew/rlimits/rss.hard");
               $mem = floor($mem_pure/250);
+              $up = shell_exec("sudo /usr/local/sbin/vserver-stat | grep $wew");
               $site = site_url();
+              if ( $up == ""){
+              $running = "Stopped";
+              $link = "<a href=\"$site/lib_vmin/start/$wew\">Start</a>";
+              }else if ( $up != "" ){
+              $running = "Running";
+              $link = "Started";
+              }
 	      echo "<tr><td>";
 	      echo "$wew\n" ;
 	      echo "</td><td>";
@@ -67,7 +75,7 @@ class Sysinfo extends Model {
 	      echo "</td><td>";
 	      echo "$mem Mb\n";
 	      echo "</td><td>";
-	      echo "<a href=\"$site/lib_vmin/start/$wew\">Start</a>" ;
+	      echo "$link" ;
 	      echo "</td><td></tr>";
 	   }
       }
